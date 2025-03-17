@@ -39,6 +39,7 @@ public class ChampionshipManager {
     
 
     public Driver getLeadingDriver() {
+        drivers= getDriverStandings();
         return drivers.get(0);
     }
     public static int getTotalChampionshipPoints() {
