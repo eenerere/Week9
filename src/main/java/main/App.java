@@ -23,12 +23,14 @@ public class App
         manager.registerDriver(d4);
         
         RallyRaceResult race1= new RallyRaceResult("Rally Finland", "Jyväskylä");
+        manager.addRaceResults(race1);
         race1.recordResult(d1, 1,25);
         race1.recordResult(d3, 2,18);
         race1.recordResult(d2, 3,15);
         race1.recordResult(d4, 4,12);
 
         RallyRaceResult race2= new RallyRaceResult("Monte Carlo Rally", "Monaco");
+        manager.addRaceResults(race2);
         race2.recordResult(d2, 1,25);
         race2.recordResult(d4, 2,18);
         race2.recordResult(d1, 3,15);
@@ -38,7 +40,7 @@ public class App
         List<Driver> drivers= manager.getDriverStandings();
         int i=1;
         for (Driver driver : drivers) {
-            System.out.printf("Position %d: %s (%s) - %d points%n", i++, driver.getName(), driver.getCountry(), driver.getPoints());
+            System.out.printf("%d. %s (%s) - %d points%n", i++, driver.getName(), driver.getCountry(), driver.getPoints());
         }
 
         System.out.println();
