@@ -35,13 +35,12 @@ public class ChampionshipManager {
         drivers.sort((driver1, driver2) -> Integer.compare(driver2.getPoints(), driver1.getPoints()));
         return drivers;
     }
-    
-    
 
     public Driver getLeadingDriver() {
         drivers= getDriverStandings();
         return drivers.get(0);
     }
+    
     public static int getTotalChampionshipPoints() {
         int totalPoints = 0; 
         for (Driver driver : drivers) { 
